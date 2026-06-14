@@ -1,0 +1,4 @@
+# Runtime + test dependencies (kept intentionally minimal).
+# This lab is offline by design: no AI-model SDKs and no network access required.
+jsonschema>=4.0        # schema validation for test cases and reviewed outputs
+pytest>=7.0            # unit tests for scoring and schema
