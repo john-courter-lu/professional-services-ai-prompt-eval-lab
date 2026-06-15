@@ -1,0 +1,16 @@
+[SYNTHETIC CLIENT PROFILE NOTES — for QA demo only. Fictional client.]
+
+Client: Morgan Bailey (household), prepping for annual review
+Advisor pre-meeting notes:
+
+- Age 54, spouse age 52, both employed. Plan to retire around 65.
+- Primary goals: (1) retire comfortably at 65, (2) fund younger child's college in ~4 years,
+  (3) pay down the vacation-property mortgage before retirement.
+- Risk tolerance on file: "moderate" (from last year's questionnaire, not re-confirmed this year).
+- Accounts: 401(k) at employer (~$640k), joint brokerage (~$180k), Roth IRA (~$95k),
+  529 plan for younger child (~$60k). Cash reserve about $40k.
+- Recent change: older child graduated and is now financially independent - 529 for older
+  child was fully used.
+- Mentioned wanting to "maybe travel more" in retirement, no specifics.
+- Estate docs: wills in place, beneficiaries reviewed two years ago.
+- No major health concerns noted.

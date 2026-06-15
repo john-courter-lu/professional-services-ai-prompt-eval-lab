@@ -1,0 +1,23 @@
+[SYNTHETIC INTAKE NOTES — for QA demo only. No real person or data.]
+
+From: jordan.rivera.demo@example.com
+Subject: tax stuff for this year
+
+Hi - sending over what I have for our taxes. Let me know what else you need.
+
+Me and my spouse Sam are filing together again like last year. We both have regular jobs -
+I got my W-2 from Northwind Retail, Sam works at Contoso Clinic and should have a W-2 too
+(haven't seen it land yet). I also did some freelance design on the side, made maybe
+$9k-ish, I think the platform sends a 1099 but not sure which kind.
+
+We have two kids, Avery (7) and the little one was born in March this year. Daycare was
+expensive - paid Bright Beginnings something like $11,000 for Avery.
+
+We still have the mortgage on the house, I can pull the 1098. Sold some shares from my
+brokerage in the fall, a few hundred dollars gain I think, Sam says it might've been a loss
+on one of them.
+
+Oh and we moved in July, new address is 482 Maple Court, same city.
+
+Thanks!
+Jordan

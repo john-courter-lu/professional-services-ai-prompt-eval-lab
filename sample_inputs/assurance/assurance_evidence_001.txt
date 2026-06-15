@@ -1,0 +1,22 @@
+[SYNTHETIC AUDIT WORKPAPER NOTES — for QA demo only. Fictional client.]
+
+Client: Lakeside Manufacturing (FY2025 audit)
+Area: Revenue recognition - testing of Q4 sales transactions
+
+Procedures / evidence so far:
+- Pulled sales register for Q4, total 1,420 invoices.
+- Selected a sample of 30 invoices for detail testing (judgmental + random mix).
+- For the sample, obtained: customer invoice copies (30 of 30), signed sales contracts
+  (27 of 30 - 3 are verbal/blanket POs, team chasing documentation), and proof of delivery
+  / shipping docs (25 of 30 obtained so far).
+- Agreed invoice amounts to the GL for the items received - no differences noted on those.
+- Cutoff: reviewed last 5 shipments before year-end and first 5 after; looks ok but haven't
+  documented the cutoff conclusion memo yet.
+
+Still open:
+- 3 contracts outstanding
+- 5 proof-of-delivery docs outstanding
+- Need to confirm whether any of the Q4 sample had related-party customers (not yet checked)
+- Revenue recognition policy memo from client not yet on file
+
+Notes: client controller responsive. No exceptions noted on the items tested to date.

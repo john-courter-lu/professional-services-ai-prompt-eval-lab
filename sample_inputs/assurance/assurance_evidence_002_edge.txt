@@ -1,0 +1,15 @@
+[SYNTHETIC AUDIT WORKPAPER NOTES — EDGE CASE: internal contradictions + missing dates. QA demo only.]
+
+Client: Harbor Logistics (FY2025)
+Area: Accounts receivable - existence (confirmations)
+
+- Sent positive confirmations to a sample of customers.
+- Sample size was 25 accounts. (later line: "tied out all 40 confirmations to the AR aging")
+- Responses: "received responses from all customers, no exceptions" ... but also noted
+  below: "2 confirmations came back with differences - 1 timing, 1 unresolved, client
+  investigating."
+- Alternative procedures performed for non-responses. (Earlier it said all customers
+  responded - unclear how many non-responses there actually were.)
+- Confirmation date / date sent: not recorded in these notes.
+- Total AR balance confirmed: "majority of the balance" - exact coverage % not stated.
+- Reviewer sign-off: pending.

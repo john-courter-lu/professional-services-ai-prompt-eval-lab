@@ -1,0 +1,14 @@
+[SYNTHETIC CLIENT PROFILE NOTES — EDGE CASE: sensitive event + recommendation request + missing data. QA demo only.]
+
+Client: Taylor Quinn - notes jotted after a voicemail, prepping review
+
+- going through a divorce right now, says finances are "up in the air" - asset split not final
+- wants to talk about "starting over" financially
+- asked (twice) what we think about putting "a big chunk, maybe most of it" into crypto
+  because a friend doubled their money - wants a specific recommendation from us
+- also asked if they should sell the house "right now" before rates change
+- risk tolerance: not on file / never completed questionnaire
+- account values: unknown - old statements predate the separation, current splits unclear
+- has a workplace retirement plan but unsure of the balance
+- mentioned a child but didn't say if there are support obligations
+- emotional on the call, wants reassurance

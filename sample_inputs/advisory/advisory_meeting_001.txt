@@ -1,0 +1,20 @@
+[SYNTHETIC MEETING NOTES — for QA demo only. Fictional client engagement.]
+
+Mtg: Summit Foods - ERP selection working session
+Attendees: client (CFO Dana, IT lead Marcus, Ops Priya), us (advisory team)
+~60 min
+
+- Dana: budget is "around 400k all-in" for year one, board wants a decision by end of Q3
+- Marcus: current system (legacy AcctgPro) goes end-of-support next year, so we can't stall
+- shortlist is down to two vendors - "VendorA" and "VendorB"
+- VendorA cheaper but Priya worried it doesn't handle their multi-warehouse inventory well
+- VendorB stronger on inventory, but implementation partner availability is tight, might
+  push go-live into next fiscal year
+- DECISION: proceed with detailed reference checks on both vendors before committing
+- DECISION: Dana approved engaging us for the data-migration readiness assessment
+- Marcus to pull current data quality stats - he didn't commit to a date
+- Priya: "can you guys also just tell us which vendor is the better buy?" - parked for now
+- risk someone raised: no internal project manager assigned yet on client side
+- migration of 8 yrs of historical data - might not all be clean
+- next session: two weeks out (date TBD), Dana traveling first week
+- someone mentioned a parallel-run period but we didn't land on how long

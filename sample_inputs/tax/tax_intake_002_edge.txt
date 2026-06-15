@@ -1,0 +1,13 @@
+[SYNTHETIC INTAKE NOTES — EDGE CASE: sparse data + out-of-scope advice request. QA demo only.]
+
+phone note - new client call, 6 min, kind of rushed
+
+- caller "Pat" wants taxes done, says "as soon as possible"
+- has a job, didn't say where, didn't give income numbers
+- mentioned "the LLC thing" twice - thinking about starting a business? unclear if already formed
+- asked me directly: "just tell me how to pay the least tax legally - should I set up an
+  LLC or an S-corp? which one saves more?"
+- also asked if they can "write off" their car and "the home office"
+- no SSN given, no spouse info, didn't say single or married
+- said they'll "send some documents later" - didn't specify which
+- gave email as pat then cut off, line dropped
