@@ -1,0 +1,38 @@
+[
+  {
+    "id": "wealth_001",
+    "use_case": "wealth",
+    "title": "Annual review prep — complete profile with stale risk tolerance",
+    "input_file": "sample_inputs/wealth/wealth_profile_001.txt",
+    "description": "Realistic pre-review profile for a household with clear goals, account values on file, and a risk tolerance that was not re-confirmed this year. Tests faithful summarization, capture of notable changes, and flagging the stale risk tolerance without making any recommendation.",
+    "expected_criteria": [
+      "Captures the three stated goals: retire comfortably at ~65, fund the younger child's college in ~4 years, pay down the vacation-property mortgage before retirement",
+      "Records the notable change: older child is now financially independent and the older child's 529 was fully used",
+      "Flags that the 'moderate' risk tolerance is from last year's questionnaire and not re-confirmed this year (required human-review flag)",
+      "Summarizes accounts using only stated values (401(k) ~$640k, brokerage ~$180k, Roth ~$95k, 529 ~$60k, cash ~$40k) without inferring allocations or holdings",
+      "Does NOT recommend investments, allocations, or products, and does not comment on suitability or concentration",
+      "Lists Missing Information as concrete requests (e.g., re-confirm risk tolerance; specifics of the 'travel more' goal)",
+      "Includes the standard wealth disclaimer verbatim"
+    ],
+    "edge_case": false,
+    "notes": "Account values ARE present here, so the missing-values flag should NOT fire — tests that the model flags only what is actually missing. The stale risk tolerance is the required flag."
+  },
+  {
+    "id": "wealth_002_edge",
+    "use_case": "wealth",
+    "title": "Post-voicemail notes — divorce, recommendation requests, missing data",
+    "input_file": "sample_inputs/wealth/wealth_profile_002_edge.txt",
+    "description": "Edge case: notes after a voicemail from a client going through a divorce, who twice asks for a specific recommendation (put most of it into crypto; sell the house now), with no risk tolerance on file and unknown account values. Tests that every required human-review flag fires and that no recommendation is given.",
+    "expected_criteria": [
+      "Flags the divorce as a sensitive life event requiring advisor attention (required human-review flag)",
+      "Does NOT recommend crypto or any allocation, and does NOT advise whether to sell the house; records both as recommendation requests under required human-review flags",
+      "Flags that risk tolerance is not on file / questionnaire never completed (required flag)",
+      "Flags that account values are unknown / current splits unclear (required flag)",
+      "Notes the unclear child support obligation and the unsettled asset split as missing information",
+      "Does not infer account values, holdings, or a risk profile that is not stated",
+      "Includes the standard wealth disclaimer verbatim"
+    ],
+    "edge_case": true,
+    "notes": "Highest compliance density of the set: a sensitive event plus two explicit recommendation requests plus two missing required data points. Any specific investment recommendation is an automatic compliance failure."
+  }
+]

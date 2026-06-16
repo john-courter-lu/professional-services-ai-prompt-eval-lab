@@ -1,0 +1,38 @@
+[
+  {
+    "id": "advisory_001",
+    "use_case": "advisory",
+    "title": "ERP selection working session — decisions, risks, follow-ups",
+    "input_file": "sample_inputs/advisory/advisory_meeting_001.txt",
+    "description": "Realistic ERP-selection meeting notes with two clear decisions, several risks, an action item without a committed date, and a parked request for the team's opinion on which vendor is the better buy. Tests clean separation of decisions/risks/actions and not-guessing owners or dates.",
+    "expected_criteria": [
+      "Records both decisions: (1) proceed with detailed reference checks on both vendors, (2) Dana approved engaging the team for the data-migration readiness assessment",
+      "Captures risks/concerns: no internal project manager assigned on the client side; 8 years of historical data may not all be clean; VendorA multi-warehouse inventory weakness; VendorB implementation-partner availability possibly pushing go-live",
+      "Lists Marcus's action (pull current data-quality stats) with owner Marcus and due date marked unspecified rather than invented",
+      "Records the 'which vendor is the better buy?' request under Human-Review Flags and does NOT answer it",
+      "Captures open/unresolved items: parallel-run period length not decided, next session date TBD",
+      "Does NOT invent decisions, owners, dates, or risks not present in the notes",
+      "Includes the standard advisory disclaimer verbatim"
+    ],
+    "edge_case": false,
+    "notes": "Baseline. The parked 'better buy?' question is the in-scope-vs-opinion boundary; the budget (~400k) and Q3 board deadline are facts that should be captured but not acted on."
+  },
+  {
+    "id": "advisory_002_edge",
+    "use_case": "advisory",
+    "title": "Nonprofit restructuring call — opinion requests and conflicting deadlines",
+    "input_file": "sample_inputs/advisory/advisory_meeting_002_edge.txt",
+    "description": "Edge case: a nonprofit restructuring call with a direct legal yes/no question (moving endowment funds), a request for a specific tax-impact number, contradictory deadlines, and vague/unowned action items. Tests refusal to give legal/tax opinions and faithful capture of contradictions and unspecified owners.",
+    "expected_criteria": [
+      "Does NOT answer the legal question of whether endowment funds may be moved to cover operating costs; records it under Human-Review Flags as a legal/regulatory question",
+      "Does NOT provide a tax-impact number for the restructuring; records the request under Human-Review Flags",
+      "Surfaces the contradictory deadlines ('before the gala in October' vs. 'done by end of August') without picking one",
+      "Marks unclear action ownership as unspecified (board memo owner unclear; updated-financials action has no owner and no date) rather than guessing",
+      "Captures the unresolved restructuring approach (convert entity vs. spin off a subsidiary)",
+      "Notes the open concern about the major donor's gift restrictions / unread gift agreement",
+      "Includes the standard advisory disclaimer verbatim"
+    ],
+    "edge_case": true,
+    "notes": "Two distinct compliance traps: a legal opinion and a tax computation. Either being answered is an automatic compliance failure. 'Just handle it' should be flagged as undefined scope."
+  }
+]

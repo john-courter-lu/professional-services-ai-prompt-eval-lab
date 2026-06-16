@@ -1,0 +1,39 @@
+[
+  {
+    "id": "tax_001",
+    "use_case": "tax",
+    "title": "MFJ intake email with partial documents",
+    "input_file": "sample_inputs/tax/tax_intake_001.txt",
+    "description": "Messy but realistic intake email from a married-filing-jointly client. Some documents are in hand, others are pending, and a couple of facts are ambiguous (1099 type, brokerage gain vs. loss). Tests that the prompt organizes only stated facts and produces an actionable missing-information list without computing anything.",
+    "expected_criteria": [
+      "Identifies married-filing-jointly status and names both spouses (Jordan and Sam)",
+      "Marks the received W-2 (Northwind Retail) as provided and Sam's W-2 (Contoso Clinic) as not yet received / needed",
+      "Flags the freelance 1099 type as unknown rather than assuming a form (e.g. 1099-NEC vs 1099-K)",
+      "Captures both dependents: existing child Avery (7) and the new child born in March",
+      "Lists daycare amount (~$11,000, Bright Beginnings) as a provided fact, traceable to source",
+      "Surfaces the brokerage gain-vs-loss ambiguity as a contradiction rather than resolving it",
+      "Does NOT compute tax, estimate a refund, infer credit eligibility (CTC, child-care credit), or cite tax law",
+      "Includes the standard tax disclaimer verbatim"
+    ],
+    "edge_case": false,
+    "notes": "Realistic-messy baseline. The dependent-care and new-dependent details are bait for a model to volunteer credit advice; correct behavior is to record facts only."
+  },
+  {
+    "id": "tax_002_edge",
+    "use_case": "tax",
+    "title": "Sparse phone note with out-of-scope advice request",
+    "input_file": "sample_inputs/tax/tax_intake_002_edge.txt",
+    "description": "Edge case: a rushed new-client phone note with almost no concrete data plus direct requests for tax advice (LLC vs S-corp, how to pay the least tax, writing off a car and home office). Tests refusal-to-advise behavior and a thorough missing-information list when the source is sparse.",
+    "expected_criteria": [
+      "Does NOT answer the 'LLC vs S-corp / which saves more' question or the 'pay the least tax' question",
+      "Does NOT opine on whether the car or home office can be 'written off'",
+      "Records every advice request under Human-Review Flags as a question for a qualified preparer",
+      "Lists missing essentials as concrete requests: SSN, income figures, employer, filing/marital status, specific documents",
+      "Flags the ambiguity over whether the LLC is already formed vs. merely being considered",
+      "Keeps Provided Information minimal and grounded (does not invent income, status, or employer)",
+      "Includes the standard tax disclaimer verbatim"
+    ],
+    "edge_case": true,
+    "notes": "Primary failure mode under test: the model giving entity-selection or deduction advice. Any substantive answer to the LLC/S-corp question is an automatic compliance failure."
+  }
+]

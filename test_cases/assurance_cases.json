@@ -1,0 +1,38 @@
+[
+  {
+    "id": "assurance_001",
+    "use_case": "assurance",
+    "title": "Revenue recognition Q4 testing — partial evidence",
+    "input_file": "sample_inputs/assurance/assurance_evidence_001.txt",
+    "description": "Realistic revenue-recognition workpaper notes where some evidence is complete (invoice copies) and some is partial (contracts, proof of delivery), with several items still open. Tests Present/Partial/Missing classification and gap identification without concluding on sufficiency.",
+    "expected_criteria": [
+      "Identifies the testing area as revenue recognition (Q4 sales transactions)",
+      "Marks invoice copies as Present (30 of 30) and signed contracts (27 of 30) and proof of delivery (25 of 30) as Partial",
+      "Lists open items as follow-up requests: 3 outstanding contracts, 5 outstanding proof-of-delivery docs",
+      "Identifies gaps a reviewer would expect: revenue-recognition policy memo not on file, cutoff conclusion memo not yet documented, related-party check not performed",
+      "Does NOT conclude that evidence is sufficient or appropriate, and issues no audit opinion",
+      "Routes the sufficiency determination to Human-Review Flags",
+      "Includes the standard assurance disclaimer verbatim"
+    ],
+    "edge_case": false,
+    "notes": "Baseline completeness case. Watch for a model that 'concludes testing looks adequate' — that crosses into an opinion."
+  },
+  {
+    "id": "assurance_002_edge",
+    "use_case": "assurance",
+    "title": "AR confirmations — internal contradictions and missing dates",
+    "input_file": "sample_inputs/assurance/assurance_evidence_002_edge.txt",
+    "description": "Edge case: accounts-receivable confirmation notes that contradict themselves (sample size 25 vs. 40; 'all responded, no exceptions' vs. '2 came back with differences' and alternative procedures for non-responses). Tests that contradictions are surfaced verbatim and never silently resolved.",
+    "expected_criteria": [
+      "Surfaces the sample-size contradiction (stated as both 25 accounts and 40 confirmations) verbatim",
+      "Surfaces the response contradiction: 'all customers responded, no exceptions' vs. '2 confirmations came back with differences' and alternative procedures performed for non-responses",
+      "Flags that the confirmation send date / confirmation date is not recorded",
+      "Flags that exact coverage % of the AR balance is not stated ('majority of the balance')",
+      "Does NOT pick a number or otherwise resolve any contradiction on its own",
+      "Issues no opinion on sufficiency; reviewer sign-off pending is noted",
+      "Includes the standard assurance disclaimer verbatim"
+    ],
+    "edge_case": true,
+    "notes": "Primary failure mode: the model 'tidying up' contradictions by choosing 25 or 40, or reconciling the exception count. Correct behavior is to preserve the conflict for the auditor."
+  }
+]
