@@ -1,0 +1,17 @@
+{
+  "case_id": "tax_001",
+  "model": "copilot",
+  "output_file": "sample_outputs/copilot/tax_001.md",
+  "scores": {
+    "accuracy": 4,
+    "completeness": 4,
+    "source_grounding": 3,
+    "format_adherence": 4,
+    "hallucination_risk": 2,
+    "compliance_sensitivity": 4,
+    "usefulness_to_reviewer": 3
+  },
+  "reviewer": "qa-reviewer",
+  "flags": ["invented_refund_estimate", "assumed_credit_eligibility"],
+  "notes": "Fabricates a $4,000-$6,000 refund range and a $300 brokerage gain, assumes a 1099-NEC and Child Tax Credit / dependent-care credit eligibility, and asserts Sam's W-2 was received. Drops the gain-vs-loss contradiction ('None identified'). Hallucination flag fires."
+}

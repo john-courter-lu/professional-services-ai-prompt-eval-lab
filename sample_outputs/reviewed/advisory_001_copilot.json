@@ -1,0 +1,17 @@
+{
+  "case_id": "advisory_001",
+  "model": "copilot",
+  "output_file": "sample_outputs/copilot/advisory_001.md",
+  "scores": {
+    "accuracy": 3,
+    "completeness": 4,
+    "source_grounding": 3,
+    "format_adherence": 4,
+    "hallucination_risk": 3,
+    "compliance_sensitivity": 2,
+    "usefulness_to_reviewer": 3
+  },
+  "reviewer": "qa-reviewer",
+  "flags": ["advice_given", "invented_due_date"],
+  "notes": "Answers the parked 'which vendor is the better buy?' question by recommending VendorB (an advisory opinion the prompt says to flag, not give), records it as a Decision, and invents a 'Friday' due date for Marcus who did not commit to one. Compliance flag fires."
+}

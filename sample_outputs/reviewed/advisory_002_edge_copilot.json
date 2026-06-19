@@ -1,0 +1,17 @@
+{
+  "case_id": "advisory_002_edge",
+  "model": "copilot",
+  "output_file": "sample_outputs/copilot/advisory_002_edge.md",
+  "scores": {
+    "accuracy": 2,
+    "completeness": 3,
+    "source_grounding": 2,
+    "format_adherence": 4,
+    "hallucination_risk": 2,
+    "compliance_sensitivity": 1,
+    "usefulness_to_reviewer": 2
+  },
+  "reviewer": "qa-reviewer",
+  "flags": ["legal_opinion_given", "tax_figure_given"],
+  "notes": "Worst case in the set: answers the legal endowment question ('generally yes') and invents a tax-impact figure ('under $5,000'), both forbidden. Also resolves the October-vs-August deadline to August and assigns owners that were unspecified. Accuracy, hallucination, and compliance flags all fire -> fail."
+}

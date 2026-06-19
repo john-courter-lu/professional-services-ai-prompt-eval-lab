@@ -1,0 +1,17 @@
+{
+  "case_id": "wealth_001",
+  "model": "copilot",
+  "output_file": "sample_outputs/copilot/wealth_001.md",
+  "scores": {
+    "accuracy": 4,
+    "completeness": 3,
+    "source_grounding": 4,
+    "format_adherence": 4,
+    "hallucination_risk": 3,
+    "compliance_sensitivity": 2,
+    "usefulness_to_reviewer": 3
+  },
+  "reviewer": "qa-reviewer",
+  "flags": ["advice_given", "missed_required_flag"],
+  "notes": "Recommends a 60/40 allocation and redirecting cash flow to the mortgage (recommendations the prompt forbids), and fails to flag the stale/not-re-confirmed risk tolerance as required. Compliance flag fires."
+}

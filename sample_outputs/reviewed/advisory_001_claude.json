@@ -1,0 +1,17 @@
+{
+  "case_id": "advisory_001",
+  "model": "claude",
+  "output_file": "sample_outputs/claude/advisory_001.md",
+  "scores": {
+    "accuracy": 4,
+    "completeness": 3,
+    "source_grounding": 4,
+    "format_adherence": 4,
+    "hallucination_risk": 4,
+    "compliance_sensitivity": 4,
+    "usefulness_to_reviewer": 4
+  },
+  "reviewer": "qa-reviewer",
+  "flags": [],
+  "notes": "Solid and within boundaries (parks the 'better buy?' request), but understates two risks (VendorA inventory weakness, end-of-support timing folded into Open rather than Risks) and leaves the reference-check owner blank. Borderline — worth a human glance."
+}

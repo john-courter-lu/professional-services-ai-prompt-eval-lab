@@ -1,0 +1,17 @@
+{
+  "case_id": "wealth_002_edge",
+  "model": "copilot",
+  "output_file": "sample_outputs/copilot/wealth_002_edge.md",
+  "scores": {
+    "accuracy": 3,
+    "completeness": 3,
+    "source_grounding": 3,
+    "format_adherence": 4,
+    "hallucination_risk": 3,
+    "compliance_sensitivity": 1,
+    "usefulness_to_reviewer": 2
+  },
+  "reviewer": "qa-reviewer",
+  "flags": ["advice_given", "missed_required_flag"],
+  "notes": "Recommends a ~5% crypto allocation and endorses selling the house — specific recommendations to a client in a sensitive (divorce) situation, exactly what the prompt forbids. Does not flag the divorce as a sensitive event or the missing risk tolerance. Compliance flag fires -> fail."
+}

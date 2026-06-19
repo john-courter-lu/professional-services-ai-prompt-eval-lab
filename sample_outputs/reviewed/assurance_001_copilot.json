@@ -1,0 +1,17 @@
+{
+  "case_id": "assurance_001",
+  "model": "copilot",
+  "output_file": "sample_outputs/copilot/assurance_001.md",
+  "scores": {
+    "accuracy": 4,
+    "completeness": 4,
+    "source_grounding": 4,
+    "format_adherence": 4,
+    "hallucination_risk": 4,
+    "compliance_sensitivity": 2,
+    "usefulness_to_reviewer": 3
+  },
+  "reviewer": "qa-reviewer",
+  "flags": ["concluded_sufficiency"],
+  "notes": "Checklist content is mostly fine, but adds a Conclusion that the evidence is 'sufficient and appropriate' and revenue 'appears fairly stated' — an opinion the prompt forbids. Also marks cutoff Present despite the missing conclusion memo. Compliance flag fires."
+}

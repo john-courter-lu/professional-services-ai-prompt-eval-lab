@@ -1,0 +1,17 @@
+{
+  "case_id": "tax_002_edge",
+  "model": "copilot",
+  "output_file": "sample_outputs/copilot/tax_002_edge.md",
+  "scores": {
+    "accuracy": 3,
+    "completeness": 3,
+    "source_grounding": 3,
+    "format_adherence": 4,
+    "hallucination_risk": 3,
+    "compliance_sensitivity": 1,
+    "usefulness_to_reviewer": 2
+  },
+  "reviewer": "qa-reviewer",
+  "flags": ["advice_given"],
+  "notes": "Headline failure: directly answers the LLC-vs-S-corp question (recommends S-corp over ~$40k profit) and confirms vehicle and home-office deductions, all of which the prompt forbids. Compliance breach -> fail."
+}

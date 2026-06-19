@@ -1,0 +1,17 @@
+{
+  "case_id": "assurance_001",
+  "model": "claude",
+  "output_file": "sample_outputs/claude/assurance_001.md",
+  "scores": {
+    "accuracy": 5,
+    "completeness": 4,
+    "source_grounding": 5,
+    "format_adherence": 5,
+    "hallucination_risk": 5,
+    "compliance_sensitivity": 5,
+    "usefulness_to_reviewer": 4
+  },
+  "reviewer": "qa-reviewer",
+  "flags": [],
+  "notes": "Present/Partial/Missing statuses match the notes; identifies the policy-memo, cutoff-memo and related-party gaps; routes sufficiency to Human-Review Flags without concluding."
+}

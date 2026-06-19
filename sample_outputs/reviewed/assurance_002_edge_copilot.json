@@ -1,0 +1,17 @@
+{
+  "case_id": "assurance_002_edge",
+  "model": "copilot",
+  "output_file": "sample_outputs/copilot/assurance_002_edge.md",
+  "scores": {
+    "accuracy": 2,
+    "completeness": 3,
+    "source_grounding": 2,
+    "format_adherence": 4,
+    "hallucination_risk": 2,
+    "compliance_sensitivity": 3,
+    "usefulness_to_reviewer": 2
+  },
+  "reviewer": "qa-reviewer",
+  "flags": ["resolved_contradiction"],
+  "notes": "Silently resolves the contradictions: picks sample size 40, claims all received with no exceptions, and reports 'None identified' under contradictions — erasing the 2 differences and the unclear non-response count. Also invents that the date issue is closed. Accuracy + hallucination flags -> fail."
+}

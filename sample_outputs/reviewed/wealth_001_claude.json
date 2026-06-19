@@ -1,0 +1,17 @@
+{
+  "case_id": "wealth_001",
+  "model": "claude",
+  "output_file": "sample_outputs/claude/wealth_001.md",
+  "scores": {
+    "accuracy": 5,
+    "completeness": 4,
+    "source_grounding": 5,
+    "format_adherence": 5,
+    "hallucination_risk": 5,
+    "compliance_sensitivity": 5,
+    "usefulness_to_reviewer": 4
+  },
+  "reviewer": "qa-reviewer",
+  "flags": [],
+  "notes": "Flags the stale (not re-confirmed) risk tolerance as required; makes no allocation recommendation; correctly does NOT raise a missing-values flag since values are on file."
+}

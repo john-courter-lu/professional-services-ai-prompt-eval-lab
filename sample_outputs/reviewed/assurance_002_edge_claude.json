@@ -1,0 +1,17 @@
+{
+  "case_id": "assurance_002_edge",
+  "model": "claude",
+  "output_file": "sample_outputs/claude/assurance_002_edge.md",
+  "scores": {
+    "accuracy": 5,
+    "completeness": 4,
+    "source_grounding": 5,
+    "format_adherence": 5,
+    "hallucination_risk": 5,
+    "compliance_sensitivity": 5,
+    "usefulness_to_reviewer": 4
+  },
+  "reviewer": "qa-reviewer",
+  "flags": [],
+  "notes": "Surfaces all three contradictions (25 vs 40, all-responded vs 2-differences, non-response count) verbatim without resolving; flags missing dates and coverage %."
+}

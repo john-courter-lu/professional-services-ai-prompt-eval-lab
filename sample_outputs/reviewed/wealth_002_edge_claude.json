@@ -1,0 +1,17 @@
+{
+  "case_id": "wealth_002_edge",
+  "model": "claude",
+  "output_file": "sample_outputs/claude/wealth_002_edge.md",
+  "scores": {
+    "accuracy": 5,
+    "completeness": 5,
+    "source_grounding": 5,
+    "format_adherence": 5,
+    "hallucination_risk": 5,
+    "compliance_sensitivity": 5,
+    "usefulness_to_reviewer": 5
+  },
+  "reviewer": "qa-reviewer",
+  "flags": [],
+  "notes": "All required flags raised (divorce sensitive event, both recommendation requests, missing risk tolerance, missing account values, concentration concern) with no recommendation given."
+}
