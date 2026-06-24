@@ -111,8 +111,7 @@ tests/               pytest unit tests for scoring and schema
 
 ## Quick start
 
-> Commands below describe the intended workflow. The CLI is built in a later phase; this
-> README is finalized when the evaluator lands.
+Requires Python 3.10+. The lab is offline — no API keys or network needed.
 
 ```bash
 # 1. Set up an isolated environment
@@ -129,6 +128,13 @@ python -m src.evaluator evaluate --report
 # 4. Run the test suite
 pytest -q
 ```
+
+> No virtualenv? If `jsonschema` and `pytest` are already on your system Python, you can skip
+> step 1 and run steps 2–4 directly with `python3 -m src.evaluator ...` and `python3 -m pytest -q`.
+
+The committed [`reports/evaluation_summary.md`](reports/evaluation_summary.md) shows the
+current results: 16 outputs across 4 use cases × 2 models, with the deliberately flawed
+`copilot` outputs surfacing as `needs-review` / `fail` via critical flags.
 
 ## Evaluation dimensions
 
@@ -148,9 +154,16 @@ Dimension definitions and scoring guidance live in `rubrics/prompt_evaluation_ru
 
 ## Adding a new prompt
 
-See [`docs/how_to_add_a_new_prompt.md`](docs/how_to_add_a_new_prompt.md) (added in a later
-phase). In short: add the versioned prompt to `prompts/`, add synthetic inputs and test
-cases, save at least one reviewed output, then re-run `validate` and `evaluate`.
+See [`docs/how_to_add_a_new_prompt.md`](docs/how_to_add_a_new_prompt.md). In short: add the
+versioned prompt to `prompts/`, add synthetic inputs and test cases, save at least one
+reviewed output, then re-run `validate` and `evaluate`.
+
+## Documentation
+
+- [`docs/prompt_library_taxonomy.md`](docs/prompt_library_taxonomy.md) — how prompts are organized, named, and versioned.
+- [`docs/known_failure_modes.md`](docs/known_failure_modes.md) — the AI-output defect catalog, with real examples from the dataset.
+- [`docs/human_review_guidelines.md`](docs/human_review_guidelines.md) — how a reviewer scores an output against the rubric.
+- [`docs/how_to_add_a_new_prompt.md`](docs/how_to_add_a_new_prompt.md) — the end-to-end workflow for extending the lab.
 
 ## Current limitations
 
