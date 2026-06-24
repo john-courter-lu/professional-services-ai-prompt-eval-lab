@@ -1,0 +1,41 @@
+name: CI
+
+# Run the offline evaluation lab's quality gates on every push and pull request.
+# No secrets or network services are needed — the lab evaluates committed data only.
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11", "3.12"]
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Validate test cases and reviewed outputs
+        run: python -m src.evaluator validate
+
+      - name: Run unit and schema tests
+        run: python -m pytest -q
+
+      - name: Confirm the evaluation report is reproducible from committed data
+        run: |
+          python -m src.evaluator evaluate --report
+          git diff --exit-code reports/evaluation_summary.md
