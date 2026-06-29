@@ -1,5 +1,7 @@
 # professional-services-ai-prompt-eval-lab
 
+[![CI](https://github.com/john-courter-lu/professional-services-ai-prompt-eval-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/john-courter-lu/professional-services-ai-prompt-eval-lab/actions/workflows/ci.yml)
+
 A **prompt evaluation lab** for professional-services workflows. This repository treats
 prompts as **testable assets** — it is *not* a chatbot app. It is a QA harness for
 writing, testing, scoring, and versioning prompts and AI outputs across four
@@ -53,8 +55,7 @@ test automation, applied to a non-deterministic system:
 
 ## How this maps to my QA / SDET background
 
-I am John Lu, an SDET / QA Automation Engineer moving into prompt and skills engineering.
-The translation is direct:
+I am John Lu, an SDET / QA Automation Engineer expanding my expertise into prompt and skills engineering. Here is how core QA practices translate into this lab:
 
 | QA / SDET practice | How it shows up in this lab |
 | --- | --- |
